@@ -1,0 +1,23 @@
+.voucher-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin: 8px;
+}
+
+.voucher-grid-container .voucher {
+    width: 100%;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+    .voucher-grid-container {
+      flex-direction: row;  /* Arrange items in a row */
+      flex-wrap: wrap;      /* Allow items to wrap to the next line */
+    }
+    
+    .voucher-grid-container .voucher {
+      width: 32%;       /* Each item takes 1/3 of the container width on large screens */
+    }
+  }

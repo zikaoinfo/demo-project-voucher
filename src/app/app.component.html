@@ -1,0 +1,35 @@
+<mat-toolbar mat-mini-fab color="primary" class="header">
+  <div>Voucher Site Logo</div>
+  <div class="menu">
+    <button mat-flat-button extended (click)="goHome()">
+      <mat-icon>home</mat-icon>Home
+    </button>
+    <button  *ngIf="isClient" mat-flat-button extended >
+      <mat-icon>sell</mat-icon>sales
+    </button>
+    <button  *ngIf="isClient" mat-flat-button extended >
+      <mat-icon>add_box</mat-icon>Create voucher
+    </button>
+    <button mat-flat-button extended [matMenuTriggerFor]="menu" >
+      <mat-icon>person</mat-icon>Profile
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [disabled] = "isUser" (click)="updateUser('user')">
+        <mat-icon>groupe</mat-icon>
+        <span>User</span>
+      </button>
+      <button mat-menu-item [disabled] = "isClient" (click)="updateUser('client')">
+        <mat-icon>manage_accounts</mat-icon>
+        <span>Client</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+<div id="container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <mat-toolbar>this is the footer</mat-toolbar>
+</footer>
+

@@ -1,0 +1,35 @@
+<form [formGroup]="creditCardForm" (ngSubmit)="onSubmit()" class="creditCardForm">
+    <mat-card>
+      <mat-card-title>Formulaire de Carte Bancaire</mat-card-title>
+      <mat-card-content class="form-container">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Nom du titulaire</mat-label>
+          <input matInput formControlName="cardholderName" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Numéro de carte</mat-label>
+          <input matInput formControlName="cardNumber" maxlength="16" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Date d'expiration</mat-label>
+          <input matInput formControlName="expirationDate" placeholder="MM/AAAA" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Code de sécurité (CVV)</mat-label>
+          <input matInput formControlName="cvv" type="password" maxlength="3" required>
+        </mat-form-field>
+        
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="creditCardForm.invalid">
+          Soumettre
+        </button>
+        {{creditCardForm.errors}}
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

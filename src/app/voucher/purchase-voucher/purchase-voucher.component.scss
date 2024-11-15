@@ -1,0 +1,15 @@
+.creditCardForm {
+  display: flex;
+  justify-content: center;
+  mat-card {
+    max-width: 400px;
+    width: 100%;
+  }
+  /* Flexbox container for the form content */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stack the form fields vertically */
+    gap: 16px; /* Space between the form fields */
+    padding: 16px;
+  }
+}
