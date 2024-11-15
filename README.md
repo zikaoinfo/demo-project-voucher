@@ -10,7 +10,7 @@ Ce projet est une version **très allégée** d'une a pour gérer des bons de r�
 - Utilisation de ma propre librairie déjà publié sur NPM: [NgxEventHubService](https://www.npmjs.com/package/ngx-event-hub/v/0.0.2-beta)
 - Utilisation d'**IndexedDB** comme base de données locale.
 - Un **pseudo-service backend** simule les interactions avec une base de données distante.
-- Une implémentation de base des principales entités : `Client`, `User`, `Voucher` et `Voucher Purchases`.
+- Une implémentation des reponsivness
 - Un schéma de base de données clair et extensible (voir ci-dessous).
 
 ---
@@ -81,7 +81,7 @@ Le projet utilise **IndexedDB** pour stocker les données en local. Voici le sch
 
 ### **Contrainte de temps**
 - Par manque de temps, de nombreuses fonctionnalités n'ont pas été implémentées, comme :
-  - L'ajout d'un Vocher
+  - L'ajout d'un Voucher
   - Suivie des sales
   - Une API backend réelle pour la persistance des données.
   seul l'activation et desactivation qu'a était implementé
