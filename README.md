@@ -7,6 +7,7 @@
 Ce projet est une version **très allégée** d'une a pour gérer des bons de réduction (*vouchers*), et leurs achats. Par manque de temps, toutes les fonctionnalités prévues n'ont pas pu être implémentées. Toutefois, cette version permet d'avoir un aperçu fonctionnel des principales structures et mécanismes.
 
 ### **Caractéristiques principales :**
+- Utilisation de ma propre librairie déjà publié sur NPM: [NgxEventHubService](https://www.npmjs.com/package/ngx-event-hub/v/0.0.2-beta)
 - Utilisation d'**IndexedDB** comme base de données locale.
 - Un **pseudo-service backend** simule les interactions avec une base de données distante.
 - Une implémentation de base des principales entités : `Client`, `User`, `Voucher` et `Voucher Purchases`.

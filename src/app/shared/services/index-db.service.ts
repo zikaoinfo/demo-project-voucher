@@ -98,4 +98,9 @@ export class IndexDbService {
   crateVoucher(voucher: Voucher): Observable<Voucher> {
     return this.dbService.add<Voucher>('voucher', voucher)
   }
+
+  buyVoucher(voucherPurchase: any): Observable<Voucher> {
+    return this.dbService.add<Voucher>('voucher_purchase', voucherPurchase)
+  }
+  
 }
